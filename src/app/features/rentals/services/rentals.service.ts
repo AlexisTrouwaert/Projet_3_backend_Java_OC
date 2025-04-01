@@ -11,7 +11,7 @@ import { RentalsResponse } from '../interfaces/api/rentalsResponse.interface';
 })
 export class RentalsService {
 
-  private pathService = 'api/rentals';
+  private pathService = 'http://localhost:9000/api/rentals';
 
   constructor(private httpClient: HttpClient) { }
 

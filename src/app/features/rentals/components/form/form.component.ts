@@ -51,7 +51,9 @@ export class FormComponent implements OnInit {
       formData.append('picture', this.rentalForm!.get('picture')?.value._files[0]);
     }
     formData.append('description', this.rentalForm!.get('description')?.value);
-
+    formData.forEach((value, key) => {
+      console.log(key + ':', value);
+    });
     if (!this.onUpdate) {
       this.rentalsService
         .create(formData)
